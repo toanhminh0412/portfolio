@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
-        <main className="lg:pt-20">
+        <main>
             <Header/>
             <Features/>
             <Projects/>

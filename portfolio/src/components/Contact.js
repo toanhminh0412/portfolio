@@ -16,7 +16,7 @@ import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/2
 
 export default function Contact() {
     return (
-        <section id="contact" className="relative isolate bg-white">
+        <section id="contact" className="relative isolate bg-white ring-1 ring-gray-900/10">
             <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
 
                 {/* Side notes */}
