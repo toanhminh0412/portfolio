@@ -1,6 +1,5 @@
-import blockContent from './blockContent'
-import category from './category'
-import post from './post'
-import author from './author'
+import linkType from './types/linkType'
+import navbar from './website/navbar'
+import header from './website/header'
 
-export const schemaTypes = [post, author, category, blockContent]
+export const schemaTypes = [linkType, navbar, header]
