@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import PopLink from './motions/PopLink';
 
 const navigation = [
-    { name: 'Why choose us?', href: '#features' },
+    { name: 'Why choose me?', href: '#features' },
     { name: 'Portfolio', href: '#projects' },
     // { name: 'Marketplace', href: '#' },
     // { name: 'Company', href: '#' },

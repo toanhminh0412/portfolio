@@ -48,7 +48,7 @@ export default function Features() {
                 <h2 className="text-base font-semibold leading-7 text-indigo-600">Everything you need</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">No technical skill? No problem.</p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                    We promise your website will be...
+                    I promise your website will be...
                 </p>
                 </div>
             </div>
