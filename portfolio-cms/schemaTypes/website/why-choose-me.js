@@ -33,7 +33,7 @@ export default defineType({
     ],
     preview: {
         select: {
-            title: 'subheading.text',
+            title: 'Why Choose Me',
             subtitle: 'Why Choose Me',
         },
     }

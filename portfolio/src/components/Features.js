@@ -1,6 +1,11 @@
 import client from "@/sanity/client"
   
-const FEATURES_QUERY = `*[_type == "whyChooseMe"][0]`
+const FEATURES_QUERY = `*[_type == "whyChooseMe"]{
+    subheading,
+    heading,
+    tagline,
+    features
+}[0]`
 
 export default async function Features() {
     const featuresContent = await client.fetch(FEATURES_QUERY);
@@ -25,7 +30,7 @@ export default async function Features() {
                 {features.map((feature) => (
                     <div key={feature._key} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                        <i className={`${feature.icon ? "" : feature.icon} absolute left-1 top-1 h-5 w-5 text-indigo-600`} aria-hidden="true" />
+                        <i className={`${feature.icon ? feature.icon : ""} absolute left-1 top-1 h-5 w-5 text-indigo-600`} aria-hidden="true" />
                         {feature.name}: 
                     </dt>{' '}
                     <dd className="inline">{feature.description.map(block => block.children.map((child) => child.text).join('')).join('')}</dd>

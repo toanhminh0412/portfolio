@@ -9,7 +9,7 @@ export default defineType({
         defineField({
             name: 'icon',
             title: 'Icon',
-            description: 'The icon that will be displayed to the user. Choose from Heroicons.',
+            description: 'The icon that will be displayed to the user. Choose from Font Awesome.',
             type: 'string',
         }),
         defineField({
