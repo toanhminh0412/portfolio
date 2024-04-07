@@ -31,10 +31,16 @@ export default defineType({
             of: [{type: 'featureType'}]
         }),
     ],
+    groups: [
+        {
+            title: "Why Choose Me",
+            fields: ['subheading', 'heading', 'tagline', 'features']
+        }
+    ],
     preview: {
         select: {
-            title: 'Why Choose Me',
-            subtitle: 'Why Choose Me',
-        },
+            title: 'subheading',
+            subtitle: 'Why Choose Me'
+        }
     }
 })
