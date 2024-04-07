@@ -25,7 +25,7 @@ export default function Navbar() {
     if (!navbarContent) return null;
 
     return (
-        <div id="navbar" className="fixed inset-x-0 top-0 z-50 bg-black bg-opacity-10">
+        <div id="navbar" className="absolute inset-0 top-0 z-50">
 
             {/* Laptop navbar */}
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">

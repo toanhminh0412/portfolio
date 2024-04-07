@@ -1,66 +1,34 @@
-import {
-    ArrowPathIcon,
-    CloudArrowUpIcon,
-    Cog6ToothIcon,
-    FingerPrintIcon,
-    LockClosedIcon,
-    ServerIcon,
-} from '@heroicons/react/20/solid'
+import client from "@/sanity/client"
   
-const features = [
-    {
-        name: 'Beautiful and modern',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
-        icon: CloudArrowUpIcon,
-    },
-    {
-        name: 'Highly customizable without technical skill',
-        description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-        icon: LockClosedIcon,
-    },
-    {
-        name: 'Great web accessibility (WACC)',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.',
-        icon: ArrowPathIcon,
-    },
-    {
-        name: 'Great search engine optimization (SEO)',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
-        icon: FingerPrintIcon,
-    },
-    {
-        name: 'Reasonable price',
-        description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-        icon: Cog6ToothIcon,
-    },
-    {
-        name: 'Responsive designs',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. ',
-        icon: ServerIcon,
-    },
-]
-  
-export default function Features() {
+const FEATURES_QUERY = `*[_type == "whyChooseMe"][0]`
+
+export default async function Features() {
+    const featuresContent = await client.fetch(FEATURES_QUERY);
+    const subheading = featuresContent.subheading;
+    const heading = featuresContent.heading;
+    const tagline = featuresContent.tagline;
+    const features = featuresContent.features;
+
     return (
         <section id="features" className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl sm:text-center">
-                <h2 className="text-base font-semibold leading-7 text-indigo-600">Everything you need</h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">No technical skill? No problem.</p>
+                <h2 className="text-base font-semibold leading-7 text-indigo-600">{subheading}</h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{heading}</p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                    I promise your website will be...
+                    {tagline}
                 </p>
                 </div>
             </div>
             <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
                 <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
                 {features.map((feature) => (
-                    <div key={feature.name} className="relative pl-9">
+                    <div key={feature._key} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                        <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
-                        {feature.name}
+                        <i className={`${feature.icon ? "" : feature.icon} absolute left-1 top-1 h-5 w-5 text-indigo-600`} aria-hidden="true" />
+                        {feature.name}: 
                     </dt>{' '}
-                    <dd className="inline">{feature.description}</dd>
+                    <dd className="inline">{feature.description.map(block => block.children.map((child) => child.text).join('')).join('')}</dd>
                     </div>
                 ))}
                 </dl>
@@ -68,7 +36,7 @@ export default function Features() {
             <div className="relative overflow-hidden pt-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <img
-                        src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
+                        src="/img/example-website.png"
                         alt="App screenshot"
                         className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
                         width={2432}
