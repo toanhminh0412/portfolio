@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import client from "@/sanity/client";
 import urlFor from "@/sanity/imageBuilder";
+import { PortableText } from "next-sanity";
 
 const contactHref = '#contact';
 
@@ -18,8 +19,9 @@ export default async function Projects() {
     const projects = projectsContent.projects.map((project) => ({
         _key: project._key,
         name: project.name,
-        description: project.description.map(block => block.children.map((child) => child.text).join('')),
+        description: project.description,
         imageSrc: urlFor(project.image).url(),
+        imageAlt: project.description.map((item) => item.children.map((child) => child.text).join('')).join(''),
         previewHref: project.previewHref,
         price: project.price,
         show: project.show,
@@ -40,14 +42,14 @@ export default async function Projects() {
                                     <Image
                                         fill
                                         src={project.imageSrc}
-                                        alt={project.description}
+                                        alt={project.imageAlt}
                                         className="h-full w-full object-cover object-center"
                                     />
                                 </div>
                             </Link>
                             <div className="relative mt-4">
                                 <h3 className="text-sm font-medium text-gray-900">{project.name}</h3>
-                                <p className="mt-1 text-sm text-gray-500">{project.description}</p>
+                                <div className="mt-1 text-sm text-gray-500"><PortableText value={project.description}/></div>
                             </div>
                         </div>
                         <div>

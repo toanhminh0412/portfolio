@@ -1,5 +1,6 @@
 import Image from "next/image";
 import client from "@/sanity/client"
+import { PortableText } from "next-sanity";
   
 const FEATURES_QUERY = `*[_type == "whyChooseMe"]{
     subheading,
@@ -34,7 +35,7 @@ export default async function Features() {
                         <i className={`${feature.icon ? feature.icon : ""} absolute left-1 top-1 h-5 w-5 text-indigo-600`} aria-hidden="true" />
                         {feature.name}: 
                     </dt>{' '}
-                    <dd className="inline">{feature.description.map(block => block.children.map((child) => child.text).join('')).join('')}</dd>
+                    <dd className="inline"><PortableText value={feature.description}/></dd>
                     </div>
                 ))}
                 </dl>
