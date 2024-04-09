@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+
+import { PortableText } from 'next-sanity';
+
 import client from '@/sanity/client';
 import urlFor from '@/sanity/imageBuilder';
 
@@ -7,7 +10,6 @@ const HEADER_QUERY = `*[_type == "header"][0]`;
 
 export default async function Header() {
     const headerContent = await client.fetch(HEADER_QUERY);
-    const description = headerContent.description.map((block) => block.children.map((child) => child.text).join('')).join('');
     const imageUrl = urlFor(headerContent.image).url();
 
     return (
@@ -23,9 +25,9 @@ export default async function Header() {
                             {headerContent.heading}
                         </h1>
                         <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-                        <p className="text-lg leading-8 text-gray-600">
-                            {description}
-                        </p>
+                            <div className="text-lg leading-8 text-gray-600">
+                                <PortableText value={headerContent.description} />
+                            </div>
                         <div className="mt-10 flex items-center gap-x-6">
                             <Link
                             href={headerContent.primaryBtn.url.current}
