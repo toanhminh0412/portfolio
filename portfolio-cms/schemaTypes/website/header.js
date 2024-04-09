@@ -43,4 +43,10 @@ export default defineType({
             fields: ['heading', 'description', 'primaryBtn', 'secondaryBtn', 'image'],
         },
     ],
+    preview: {
+        select: {
+            title: 'heading',
+            subtitle: 'Header'
+        }
+    }
 })

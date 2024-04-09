@@ -1,3 +1,4 @@
+import Image from "next/image";
 import client from "@/sanity/client"
   
 const FEATURES_QUERY = `*[_type == "whyChooseMe"]{
@@ -40,7 +41,7 @@ export default async function Features() {
             </div>
             <div className="relative overflow-hidden pt-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <img
+                    <Image
                         src="/img/example-website.png"
                         alt="App screenshot"
                         className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
