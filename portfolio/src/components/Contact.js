@@ -93,37 +93,28 @@ export default function Contact() {
                 <form action="#" method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
                     <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                        <div>
+                        
+                        {/* Name */}
+                        <div className="sm:col-span-2">
                             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
-                            First name
+                            Name
                             </label>
                             <div className="mt-2.5">
                             <input
                                 type="text"
-                                name="first-name"
-                                id="first-name"
+                                name="name"
+                                id="name"
+                                placeholder='Your name'
                                 autoComplete="given-name"
                                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             />
                             </div>
                         </div>
-                        <div>
-                            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
-                            Last name
-                            </label>
-                            <div className="mt-2.5">
-                            <input
-                                type="text"
-                                name="last-name"
-                                id="last-name"
-                                autoComplete="family-name"
-                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            />
-                            </div>
-                        </div>
+
+                        {/* Email */}
                         <div className="sm:col-span-2">
                             <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-                            Email
+                            Email (Must specify either email or phone)
                             </label>
                             <div className="mt-2.5">
                             <input
@@ -131,33 +122,56 @@ export default function Contact() {
                                 name="email"
                                 id="email"
                                 autoComplete="email"
+                                placeholder='Your email address'
                                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             />
                             </div>
                         </div>
+
+                        {/* Phone number */}
                         <div className="sm:col-span-2">
                             <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
-                            Phone number
+                            Phone number (Must specify either email or phone)
                             </label>
                             <div className="mt-2.5">
                             <input
                                 type="tel"
                                 name="phone-number"
                                 id="phone-number"
+                                placeholder='Your phone number'
                                 autoComplete="tel"
                                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             />
                             </div>
                         </div>
+
+                        {/* Business type */}
+                        <div className="sm:col-span-2">
+                            <label htmlFor="business-type" className="block text-sm font-semibold leading-6 text-gray-900">
+                            Business type
+                            </label>
+                            <div className="mt-2.5">
+                            <input
+                                type="text"
+                                name="business-type"
+                                id="business-type"
+                                placeholder='What is your business?'
+                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                            </div>
+                        </div>
+                        
+
+                        {/* Message */}
                         <div className="sm:col-span-2">
                             <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-                            Message
+                            Describe the website you are looking for
                             </label>
                             <div className="mt-2.5">
                             <textarea
                                 name="message"
                                 id="message"
-                                rows={4}
+                                rows={8}
+                                placeholder='What do you want to display on your website? How long do you want the website to be? What sections do you want to include? Provide an example if possible. Anything that helps me understand your needs better.'
                                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 defaultValue={''}
                             />
