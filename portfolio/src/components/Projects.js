@@ -9,7 +9,14 @@ const contactHref = '#contact';
 const PROJECTS_QUERY = `*[_type == "projects"]{
     heading,
     tagline,
-    projects
+    projects[]{
+        _key,
+        name,
+        description,
+        image,
+        previewHref,
+        show
+    }
 }[0]`
   
 export default async function Projects() {
@@ -23,7 +30,6 @@ export default async function Projects() {
         imageSrc: urlFor(project.image).url(),
         imageAlt: project.description.map((item) => item.children.map((child) => child.text).join('')).join(''),
         previewHref: project.previewHref,
-        price: project.price,
         show: project.show,
     }));
 
