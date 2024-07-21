@@ -11,6 +11,7 @@ export default function Home() {
             <Features/>
             <Projects/>
             <Contact/>
+            <iframe src="https://www.easierform.com/viewform/getaquotedemo" width="100%" height="1000px" frameBorder="0"></iframe>
             <Footer/>
         </main>
     );
