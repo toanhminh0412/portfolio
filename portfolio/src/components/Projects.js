@@ -21,8 +21,6 @@ const PROJECTS_QUERY = `*[_type == "projects"]{
   
 export default async function Projects() {
     const projectsContent = await client.fetch(PROJECTS_QUERY);
-    const heading = projectsContent.heading;
-    const tagline = projectsContent.tagline;
     const projects = projectsContent.projects.map((project) => ({
         _key: project._key,
         name: project.name,
@@ -36,8 +34,8 @@ export default async function Projects() {
     return (
         <section id="projects" className="bg-white">
             <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-                <h2 className="text-2xl font-bold text-gray-900">{heading}</h2>
-                <p className="font-light">{tagline}</p>
+                <h2 className="text-2xl font-bold text-gray-900">Our portfolio</h2>
+                <p className="font-light">These are past projects that I&apos;ve worked on</p>
 
                 <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-10">
                 {projects.map((project) => project.show ? (

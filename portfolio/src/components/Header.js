@@ -16,7 +16,7 @@ export default function Header() {
                         </h1>
                         <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
                             <div className="text-lg leading-8 text-gray-600">
-                                Hi! My name is Archie To. I'm a professional web developer working full-time for the University of Victoria. I offer my service to help business owners build a beautiful website for their business. With 5 years of experience, I can make your vision on the web come true.
+                                Hi! My name is Archie To. I&apos;m a professional web developer working full-time for the University of Victoria. I offer my service to help business owners build a beautiful website for their business. With 5 years of experience, I can make your vision on the web come true.
                             </div>
                             <div className="mt-10 flex items-center gap-x-6">
                                 <Link

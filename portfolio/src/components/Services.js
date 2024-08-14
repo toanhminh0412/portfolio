@@ -130,13 +130,13 @@ export default function Services() {
                 </div>
                 
                 {/* Maintainance fee */}
-                <div className='mt-10 w-full md:w-3/4 mx-auto'>
+                <div className='mt-20 w-full md:w-3/4 mx-auto'>
                     <p className="mt-2 text-lg sm:text-xl font-semibold tracking-tight text-gray-900">
                         I offer 2 matainance packages:
                     </p>
                     <ul className='list-disc ml-4'>
-                        <li className='text-gray-600 mt-2'><strong>$50/month</strong>: I&apos;ll check your website daily to make sure everything is working well and dedicate 2 hours each month to fix any issue. Once the 2 hours end, it&apos;s $75/hour for every extra hour.</li>
-                        <li className='text-gray-600 mt-2'><strong>$75/hour</strong>: You simply contact me when you need something fixed.</li>
+                        <li className='text-gray-600 mt-4'><strong>$50/month</strong>: I&apos;ll check your website daily to make sure everything is working well and dedicate 2 hours each month to fix any issue. Once the 2 hours end, it&apos;s $75/hour for every extra hour.</li>
+                        <li className='text-gray-600 mt-4'><strong>$75/hour</strong>: You simply contact me when you need something fixed.</li>
                     </ul>  
                 </div>
             </div>
