@@ -1,17 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { PortableText } from 'next-sanity';
-
-import client from '@/sanity/client';
-import urlFor from '@/sanity/imageBuilder';
-
-const HEADER_QUERY = `*[_type == "header"][0]`;
-
-export default async function Header() {
-    const headerContent = await client.fetch(HEADER_QUERY);
-    const imageUrl = urlFor(headerContent.image).url();
-
+export default function Header() {
     return (
         <header id="header" className="bg-white">
             <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
@@ -22,30 +12,30 @@ export default async function Header() {
                 <div className="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
                         <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">
-                            {headerContent.heading}
+                            Professional web developer
                         </h1>
                         <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
                             <div className="text-lg leading-8 text-gray-600">
-                                <PortableText value={headerContent.description} />
+                                Hi! My name is Archie To. I'm a professional web developer working full-time for the University of Victoria. I offer my service to help business owners build a beautiful website for their business. With 5 years of experience, I can make your vision on the web come true.
                             </div>
-                        <div className="mt-10 flex items-center gap-x-6">
-                            <Link
-                            href={headerContent.primaryBtn.url.current}
-                            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            >
-                            {headerContent.primaryBtn.text}
-                            </Link>
-                            <Link href={headerContent.secondaryBtn.url.current} className="text-sm font-semibold leading-6 text-gray-900">
-                            {headerContent.secondaryBtn.text} <span aria-hidden="true">→</span>
-                            </Link>
-                        </div>
+                            <div className="mt-10 flex items-center gap-x-6">
+                                <Link
+                                    href="#contact"
+                                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    >
+                                    Get a quote
+                                </Link>
+                                <Link href="#features"className="text-sm font-semibold leading-6 text-gray-900">
+                                    Why me <span aria-hidden="true">→</span>
+                                </Link>
+                            </div>
                         </div>
                         <Image
-                        width={700}
-                        height={500}
-                        src={imageUrl}
-                        alt={headerContent.heading}
-                        className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+                            width={700}
+                            height={1000}
+                            src="/img/profile.jpg"
+                            alt="Professional web developer"
+                            className="mt-10 w-full max-w-lg rounded-2xl object-contain sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
                         />
                     </div>
                 </div>
