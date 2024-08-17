@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
     title: "Archie To",
-    description: "Archie To is a professional website designer and software engineer. Archie is estatic to help business owners to build a strong digital presence for their businesses.",
+    description: "Hi! My name is Archie To. I'm a professional web developer working full-time for the University of Victoria. I offer my service to help business owners build a beautiful website for their business. With 5 years of experience, I can make your vision on the web come true.",
 };
 
 export default function RootLayout({ children }) {
