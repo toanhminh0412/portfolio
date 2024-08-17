@@ -25,7 +25,7 @@ export default function Navbar() {
     if (!navbarContent) return null;
 
     return (
-        <div id="navbar" className="absolute inset-0 top-0 z-50">
+        <div id="navbar" className="absolute inset-x-0 top-0 z-50">
 
             {/* Laptop navbar */}
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -35,7 +35,7 @@ export default function Navbar() {
                         className="-m-1.5 p-1.5 font-semibold text-2xl text-black"
                     >{navbarContent.name.text}</PopLink>
                 </div>
-                <div className="flex lg:hidden">
+                {/* <div className="flex lg:hidden">
                     <button
                     type="button"
                     className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -44,7 +44,7 @@ export default function Navbar() {
                     <span className="sr-only">Open main menu</span>
                     <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
-                </div>
+                </div> */}
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navbarContent.items.map((item) => (
                     <PopLink 
@@ -68,7 +68,7 @@ export default function Navbar() {
                 <div className="fixed inset-0 z-50" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                    <Link href={navbarContent.name.url.current} className="-m-1.5 p-1.5 font-semibold text-2xl text-black">
+                    <Link href={`/${navbarContent.name.url.current}`} className="-m-1.5 p-1.5 font-semibold text-2xl text-black">
                         {navbarContent.name.text}
                     </Link>
                     <button
@@ -86,7 +86,7 @@ export default function Navbar() {
                         {navbarContent.items.map((item) => (
                             <Link
                             key={item._key}
-                            href={item.url.current}
+                            href={`/${item.url.current}`}
                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                             >
                             {item.text}
