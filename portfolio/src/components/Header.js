@@ -25,7 +25,7 @@ export default function Header() {
                                     >
                                     Get a quote
                                 </Link>
-                                <Link href="#features"className="text-sm font-semibold leading-6 text-gray-900">
+                                <Link href="#features" className="text-sm font-semibold leading-6 text-gray-900">
                                     Why me <span aria-hidden="true">→</span>
                                 </Link>
                             </div>
