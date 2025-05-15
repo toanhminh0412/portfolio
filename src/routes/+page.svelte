@@ -1,4 +1,4 @@
-<div class="max-w-[500px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1500px] mx-auto bg-base-100 px-4 md:px-12 lg:px-16 py-16 prose">
+<div class="max-w-[500px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1500px] mx-auto bg-base-100/70 px-4 md:px-12 lg:px-16 py-16 prose">
   <div class="flex flex-col lg:flex-row gap-12">
     <figure class="w-full lg:w-1/2 lg:max-w-[400px] not-prose">
       <img
@@ -34,18 +34,19 @@
   </div>
 
   <h2>Projects</h2>
-  <p>This are all SaaS products that I've built with a purpose of solving real-world problems that I've encountered. Two of them have failed but they sure taught me a lot.</p>
+  <p>Some of these are SaaS products that I've built with a purpose of solving real-world problems that I've encountered. Two of them have failed but they sure taught me a lot.</p>
   <!-- name of each tab group should be unique -->
   <div class="tabs tabs-lift">
     <label class="tab">
       <input type="radio" name="project-tab" />
       Analyzing Machine (Latest)
     </label>
-    <div class="tab-content bg-base-100 border-base-300 p-6">
+    <div class="tab-content border-base-300 p-6">
       <div class="flex flex-row gap-2">
         <div class="badge badge-primary">Start: Mar 2025</div>
         <div class="badge badge-primary">End: Ongoing</div>
         <div class="badge badge-warning">Latest</div>
+        <div class="badge badge-secondary">SaaS</div>
       </div>
       <h3 class="mb-8">Analyzing Machine (AM) - Quality evaluation AI for Air Traffic Control communication</h3>
       <p><strong>Problem:</strong> There are tens of thousands of Air Traffic Control communication recordings that need to be reviewed by auditors every month. This is a very time-consuming and expensive process.</p>
@@ -78,30 +79,38 @@
     </div>
 
     <label class="tab">
-      <input type="radio" name="project-tab" checked/>
+      <input type="radio" name="project-tab"/>
       <img src="/img/easierform.png" alt="EasierForm" class="w-8 h-8 not-prose">
       EasierForm
     </label>
-    <div class="tab-content bg-base-100 border-base-300 p-6">
+    <div class="tab-content border-base-300 p-6">
       <div class="flex flex-row gap-2">
         <div class="badge badge-primary">Start: May 2024</div>
         <div class="badge badge-primary">End: Dec 2024</div>
+        <div class="badge badge-secondary">SaaS</div>
       </div>
       <h3 class="mb-8">EasierForm - A fully-customizable drag-and-drop form builder</h3>
       <div class="flex flex-row gap-2">
         <a href="https://easierform.com" target="_blank" class="btn bg-purple-700 hover:bg-purple-900 duration-300 text-white btn-sm">
           <i class="fa-solid fa-globe"></i>
-          Live demo
+          Visit website
         </a>
         <a href="https://github.com/toanhminh0412/easier-form" target="_blank" class="btn bg-blue-700 hover:bg-blue-900 duration-300 text-white btn-sm">
           <i class="fa-brands fa-github"></i>
           GitHub
         </a>
       </div>
+      <div>
+      
+      <video class="mt-8 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10" autoPlay loop muted playsInline>
+        <source src="https://firebasestorage.googleapis.com/v0/b/easier-form.appspot.com/o/videos%2FMaking%20Form%20-%20EasierForm.mp4?alt=media&token=5cdca4d3-c66d-45b6-8ebf-2b1f6643c027" type="video/mp4" /> Your browser does not support the video tag.
+      </video>
+
+      </div>
       <p><strong>Problem:</strong> Most forms built with Google Forms look the same due to the limited customization options. Also, Google Forms is not designed for complex forms.</p>
       <p><strong>Solution:</strong> Build a fully-customizable drag-and-drop form builder that allows users to create complex and beautiful forms with ease.</p>
       <p>
-        <strong>Tech stack:</strong> Django, Next.js, MongoDB, Vercel, Stripe API, EmailJS
+        <strong>Tech stack:</strong> Next.js, MongoDB, Vercel, Stripe API, EmailJS
         <br>
         <strong>My role:</strong> Develop features, build infrastructure, and deploy the application.
       </p>
@@ -133,10 +142,60 @@
     </div>
 
     <label class="tab">
-      <input type="radio" name="project-tab" />
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 me-2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
-      Love
+      <input type="radio" name="project-tab" checked />
+      <img src="/img/eport.png" alt="Eport" class="w-4 h-4 not-prose mr-2">
+      Eport
     </label>
-    <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
+    <div class="tab-content border-base-300 p-6">
+      <div class="flex flex-row gap-2">
+        <div class="badge badge-primary">Start: July 2023</div>
+        <div class="badge badge-primary">End: Apr 2024</div>
+        <div class="badge badge-secondary">SaaS</div>
+      </div>
+      <h3 class="mb-8">Eport - Simple portfolio website builder for job seekers, freelancers and small businesses</h3>
+      <div class="flex flex-row gap-2">
+        <a href="https://eport.site" target="_blank" class="btn bg-purple-700 hover:bg-purple-900 duration-300 text-white btn-sm">
+          <i class="fa-solid fa-globe"></i>
+          Visit website
+        </a>
+        <a href="https://github.com/toanhminh0412/eport" target="_blank" class="btn bg-blue-700 hover:bg-blue-900 duration-300 text-white btn-sm">
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
+      </div>
+      
+      <div class="relative overflow-hidden w-full pt-[56.25%] mt-8">
+        <iframe src="https://www.youtube.com/embed/6xItzgh8OAs?si=WHcXfsd0SZ64Sjxf" class="text-center absolute top-0 left-0 bottom-0 right-0 w-full h-full" title="Freelancer Demo Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+      </div>
+      
+      <p><strong>Problem:</strong> Popular website builders such as WordPress and Wix are too technical and complicated for people to just want to create a simple website to advertise their services with only enough information.</p>
+      <p><strong>Solution:</strong> Design pre-built professional-looking templates that users can grab, put their information and publish within minutes.</p>
+      <p>
+        <strong>Tech stack:</strong> Next.js, Firebase, Vercel, Stripe API, EmailJS
+        <br>
+        <strong>My role:</strong> Develop features, build infrastructure, and deploy the application.
+      </p>
+      <div>
+        <strong>Key features:</strong>
+        <ul>
+          <li>
+            <strong>Pre-built dynamic and aesthetic templates:</strong>
+            Design templates for different sections such as Home, About, Services, Contact, etc. Each section is designed to be responsive and look good regardless of the amount of content.
+          </li>
+          <li>
+            <strong>Content management:</strong>
+            Allow users to add, edit and delete content for each section.
+          </li>
+          <li>
+            <strong>Email integration:</strong>
+            Integrate EmailJS to allow users to create working contact forms.
+          </li>
+          <li>
+            <strong>Payment integration:</strong>
+            Integrate Stripe API to manage user subscription and payment.
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
