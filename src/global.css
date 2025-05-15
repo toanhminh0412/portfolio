@@ -2,3 +2,4 @@
 @plugin "daisyui" {
   themes: luxury --default;
 }
+@plugin "@tailwindcss/typography";
