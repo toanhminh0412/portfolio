@@ -38,7 +38,7 @@
   <!-- name of each tab group should be unique -->
   <div class="tabs tabs-lift">
     <label class="tab">
-      <input type="radio" name="project-tab" />
+      <input type="radio" name="project-tab" checked />
       Analyzing Machine (Latest)
     </label>
     <div class="tab-content border-base-300 p-6">
@@ -73,6 +73,60 @@
           <li>
             <strong>Infrastructure:</strong>
             Deploy the app on an AWS EC2 instance, use NGINX as a reverse proxy, PostgreSQL as the database, RabbitMQ for asynchronous task processing, S3 for file storage and Route 53 for DNS.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <label class="tab">
+      <input type="radio" name="project-tab"/>
+      STRAP platform
+    </label>
+    <div class="tab-content border-base-300 p-6">
+      <div class="flex flex-row gap-2">
+        <div class="badge badge-primary">Start: Jan 2023</div>
+        <div class="badge badge-primary">End: Ongoing</div>
+        <div class="badge badge-accent">Work project</div>
+        <div class="badge badge-secondary">Open source</div>
+      </div>
+      <h3 class="mb-8">STRAP platform - Self-serve app deployment platform for researchers</h3>
+      <div class="flex flex-row gap-2">
+        <a href="https://arcsoft.uvic.ca/projects/strap/" target="_blank" class="btn bg-purple-700 hover:bg-purple-900 duration-300 text-white btn-sm">
+          <i class="fa-solid fa-globe"></i>
+          More about STRAP
+        </a>
+        <a href="https://gitlab.com/uvic-arcsoft/strap" target="_blank" class="btn bg-orange-700 hover:bg-orange-900 duration-300 text-white btn-sm">
+          <i class="fa-brands fa-gitlab"></i>
+          Gitlab
+        </a>
+      </div>
+      <p><strong>Problem:</strong> Researchers have a web app that they want to deploy. However, most of them don't have the expertise and resources to deploy and manage the infrastructure. That haven't even included the price management when it comes to cloud services.</p>
+      <p>
+        <strong>Solution:</strong> Our team, (ARCsoft), built a platform that researchers can deploy their apps and necessary infrastructure with just a few clicks.
+      </p>
+      <p>
+        <strong>Tech stack:</strong> Django, Kubernetes, Helm, Terraform, OpenStack
+        <br>
+        <strong>My role:</strong> Develop the platform and automate the deployment process.
+      </p>
+      <div>
+        <strong>Key features:</strong>
+        <ul>
+          <li>
+            <strong>User-facing web app:</strong>
+            Build a user-friendly web app that performs complex functionalities such as invoking the deployment processes, providing a real-time deployment and app log and implementing a complex list of admin settings that modify the connected infrastructure.
+          </li>
+          <li>
+            <strong>Infrastructure:</strong>
+            Deploy authentication services with Keycloak, Harbor image scanner, object storage with MinIO, PostgreSQL database and more.
+          </li>
+          <li>
+            <strong>Deployment automation:</strong>
+            Automate deployment processes with Terraform and Helm. Develop Terraform modules to deploy necessary infrastructure for each app.
+          </li>
+          <li>
+            <strong>Open source:</strong>
+            The platform is open source and available on Gitlab. During the project, we've made quite a few contributions to other open source projects such Traefik forward auth and Harbor Helm.
           </li>
         </ul>
       </div>
@@ -142,7 +196,7 @@
     </div>
 
     <label class="tab">
-      <input type="radio" name="project-tab" checked />
+      <input type="radio" name="project-tab" />
       <img src="/img/eport.png" alt="Eport" class="w-4 h-4 not-prose mr-2">
       Eport
     </label>
